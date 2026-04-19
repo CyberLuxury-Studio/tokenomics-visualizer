@@ -2,80 +2,56 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-[#e5e2e1] font-inter">
-      {/* Dynamic Header based on repo name */}
-      <nav className="fixed w-full z-50 bg-[#050505]/90 backdrop-blur-md border-b border-[#3b4b37]/30">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-space-grotesk text-2xl font-bold tracking-widest text-[#00FF41] uppercase">tokenomics_PROT</div>
-          <div className="hidden md:flex gap-8 font-space-grotesk text-sm uppercase tracking-widest text-[#84967e]">
-            <a href="#features" className="hover:text-[#00FF41]">Features</a>
-            <a href="#pricing" className="hover:text-[#00FF41]">Pricing</a>
-            <a href="#docs" className="hover:text-[#00FF41]">Docs</a>
-          </div>
-          <button className="px-6 py-2 border border-[#00FF41] text-[#00FF41] font-mono text-sm hover:bg-[#00FF41] hover:text-[#050505] transition-colors">
-            INITIATE
-          </button>
-        </div>
+    <main className="min-h-screen bg-[#0d0e15] text-[#eeedf7] font-['Space_Grotesk']">
+      <nav className="fixed w-full z-50 bg-[#0d0e15]/90 border-b border-[#474750]/30 h-20 flex items-center px-10 justify-between">
+        <div className="text-xl font-bold text-[#96f8ff] tracking-widest uppercase">TK_VISUAL</div>
+        <button className="px-6 py-2 bg-[#96f8ff] text-black text-sm uppercase font-bold tracking-widest hover:shadow-[0_0_15px_rgba(150,248,255,0.5)]">Enter App</button>
       </nav>
 
-      {/* Hero */}
-      <section className="pt-40 pb-32 px-6 flex flex-col items-center justify-center text-center min-h-[80vh]">
-         <div className="inline-block px-3 py-1 bg-[#131313] border border-[#3b4b37] text-[#84967e] font-mono text-xs mb-8">SYSTEM_STATUS: SECURE</div>
-         <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold tracking-tighter mb-6 uppercase">
-           THE ULTIMATE <br/><span className="text-[#00FF41] underline decoration-[#FF003C] underline-offset-8 decoration-4">tokenomics visualizer</span>
-         </h1>
-         <p className="text-lg text-[#84967e] max-w-2xl mb-12">
-           Build a tokenomics dashboard. Feature iridescent donut charts, vesting schedule timelines, and circulating supply metrics.
-         </p>
-         <button className="px-12 py-4 bg-[#00FF41] text-[#003907] font-space-grotesk font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(0,255,65,0.4)]">
-           LAUNCH TERMINAL
-         </button>
+      <section className="pt-40 pb-32 px-10 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(150,248,255,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+        <h1 className="text-6xl md:text-8xl font-bold uppercase tracking-tighter mb-8 relative z-10">
+          SEE THE <span className="text-[#96f8ff]">SUPPLY.</span>
+        </h1>
+        <p className="text-xl text-[#abaab4] max-w-2xl mx-auto mb-12 relative z-10">
+          Iridescent tokenomics dashboards. Vesting schedules mapped in real-time. Circulating supply metrics at a glance.
+        </p>
+        <button className="px-10 py-4 bg-transparent border-2 border-[#96f8ff] text-[#96f8ff] uppercase tracking-widest font-bold text-lg hover:bg-[#96f8ff] hover:text-black transition-all relative z-10">
+          Explore Metrics
+        </button>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-32 bg-[#0e0e0e] px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-space-grotesk font-bold uppercase tracking-widest mb-16 text-[#00FF41] border-b border-[#3b4b37]/30 pb-4">Core Architecture</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-[#131313] p-8 border border-[#3b4b37]/30 hover:border-[#00FF41]/50 transition-colors">
-                <div className="text-3xl font-mono text-[#FF003C] mb-6">0{i}</div>
-                <h3 className="text-xl font-space-grotesk uppercase tracking-widest mb-4">Module {i}</h3>
-                <p className="text-[#84967e] text-sm">High-performance components designed for extreme data density and rapid execution. No bloated code. Just pure function.</p>
-              </div>
-            ))}
+      <section className="py-20 px-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="bg-[#12131b] border border-[#474750]/30 p-10 flex flex-col items-center text-center group hover:bg-[#181922] transition-colors">
+          <div className="w-32 h-32 rounded-full border-8 border-[#181922] border-t-[#96f8ff] border-r-[#ff51fa] mb-8 shadow-[0_0_20px_rgba(150,248,255,0.2)] group-hover:rotate-90 transition-transform duration-1000"></div>
+          <h3 className="text-2xl uppercase tracking-widest text-[#96f8ff] mb-4">Supply Donuts</h3>
+          <p className="text-[#abaab4]">High-fidelity charts mapping treasury, team, and community allocations.</p>
+        </div>
+        <div className="bg-[#12131b] border border-[#474750]/30 p-10 flex flex-col items-center text-center group hover:bg-[#181922] transition-colors">
+          <div className="w-full h-8 bg-[#181922] flex items-center px-1 mb-8">
+             <div className="h-2 bg-[#ff51fa] shadow-[0_0_10px_#ff51fa]" style={{width: '40%'}}></div>
           </div>
+          <h3 className="text-2xl uppercase tracking-widest text-[#ff51fa] mb-4">Vesting Timelines</h3>
+          <p className="text-[#abaab4]">Visual cliff and unlock schedules ensuring complete transparency.</p>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="py-32 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-10 border border-[#3b4b37]/50 bg-[#0e0e0e]">
-            <h3 className="text-2xl font-space-grotesk uppercase tracking-widest mb-2 text-[#84967e]">Base Node</h3>
-            <div className="text-4xl font-mono mb-8 text-[#e5e2e1]">./process_batch1_landing.sh / mo</div>
-            <button className="w-full py-3 border border-[#84967e] text-[#84967e] font-mono text-sm uppercase mb-8 hover:bg-[#84967e] hover:text-[#050505]">Deploy Base</button>
-            <ul className="space-y-4 font-mono text-sm text-[#84967e]">
-              <li>+ Standard API Limits</li>
-              <li>+ Community Support</li>
-            </ul>
-          </div>
-          <div className="p-10 border border-[#00FF41] bg-[#131313] shadow-[0_0_30px_rgba(0,255,65,0.05)]">
-            <h3 className="text-2xl font-space-grotesk uppercase tracking-widest mb-2 text-[#00FF41]">Quantum Node</h3>
-            <div className="text-4xl font-mono mb-8 text-[#e5e2e1]">9 / mo</div>
-            <button className="w-full py-3 bg-[#00FF41] text-[#003907] font-mono font-bold text-sm uppercase mb-8 hover:bg-white">Deploy Quantum</button>
-            <ul className="space-y-4 font-mono text-sm text-[#e5e2e1]">
-              <li className="text-[#00FF41]">+ Unlimited API Calls</li>
-              <li>+ Dedicated SLA</li>
-              <li>+ Custom Integrations</li>
-            </ul>
-          </div>
+      <section className="py-32 bg-[#000000] border-t border-[#474750]/30 text-center">
+        <h2 className="text-4xl font-bold uppercase tracking-widest text-[#eeedf7] mb-16">Enterprise Ready</h2>
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 px-10">
+           <div className="flex-1 border border-[#474750] p-8">
+             <h3 className="text-xl text-[#abaab4] mb-4 uppercase">Public API</h3>
+             <div className="text-3xl text-[#96f8ff]">9<span className="text-sm">/mo</span></div>
+           </div>
+           <div className="flex-1 border border-[#ff51fa] bg-[#12131b] p-8 shadow-[0_0_20px_rgba(255,81,250,0.1)]">
+             <h3 className="text-xl text-[#ff51fa] mb-4 uppercase">Institutional</h3>
+             <div className="text-3xl text-[#eeedf7]">99<span className="text-sm">/mo</span></div>
+           </div>
         </div>
       </section>
-      
-      {/* Footer */}
-      <footer className="py-12 border-t border-[#3b4b37]/30 text-center font-mono text-xs text-[#84967e]">
-        <p>END OF FILE. tokenomics-visualizer © 2024</p>
+
+      <footer className="py-10 text-center border-t border-[#474750]/30">
+        <p className="text-xs text-[#abaab4] tracking-widest uppercase">TK_VISUAL © 2024</p>
       </footer>
     </main>
   );
